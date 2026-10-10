@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+       <link rel="stylesheet" href="css/style.css">
+  <style>
+   
+   
+
+    /* =========================================================
+       THEME TOKENS — change these to re-theme the whole site
+       ========================================================= */
+   
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+    @media (max-width: 900px) {
+      .hero, .about-grid, .skills-grid, .contact-grid, .cards-3, .projects {
+        grid-template-columns: 1fr;
+      }
+      .projects { grid-template-columns: repeat(2, 1fr); }
+      .hamburger { display: flex; }
+      .nav-links {
+        position: fixed;
+        top: var(--nav-h);
+        right: 0; left: 0;
+        background: var(--bg-elevated);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        padding: 12px;
+        display: none;
+      }
+      .nav-links.open { display: flex; }
+    }
+    @media (max-width: 640px) {
+      .projects, .stats { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+    }
+  </style>
+</head>
+<body>
+  <!-- =========================================================
+       NAVBAR
+       Replace logo text with your name/brand
+       ========================================================= -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="#home"><span></span></a><!-- PUT YOUR NAME -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================
+         1. HOME / HERO
+         PUT YOUR: greeting, name, job title, tagline, CV link, photo, social URLs
+         ========================================================= -->
+    <section id="home">
+      <div class="container hero">
+        <div class="reveal">
+          <p class="greeting">Hello, I’m</p><!-- PUT YOUR GREETING -->
+          <h1><!-- PUT YOUR NAME -->Youssef Mohammad 
+          </h1>
+          <p class="job-title"><!-- PUT YOUR JOB TITLE -->Full Stack.Net</p>
+          <p class="muted"><!-- PUT YOUR TAGLINE -->Turning complex requirements into high-performing solutions.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://drive.google.com/file/d/1ozFq5bz9owrqbG9Dc5RyHNO4R6BkrwtC/view?usp=drive_link"><!-- PUT YOUR CV FILE/URL -->Download CV</a>
+            <a class="btn btn-ghost" href="#contact">Contact Me</a>
+          </div>
+          <div class="socials">
+            <!-- PUT YOUR SOCIAL LINKS -->
+            <a href="https://github.com/youssef0abbas" aria-label="GitHub">GH</a>
+            <a href="https://www.linkedin.com/in/youssef-mohammed-b55a16337/?isSelfProfile=true" aria-label="LinkedIn">in</a>
+            
+          </div>
+        </div>
+        <img src="img/WhatsApp Image 2026-10-07 at 12.14.37 AM.jpeg" alt="My Photo" class="hero-photo reveal">
+      </div>
+    </section>
+
+  
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+        
+        
+          <h2>About </h2>
+          <br>
+          <br>
+        
+          <div class="reveal">
+            <p> </p>
+            <p class="muted" style="margin-top:12px; text-align: center;">I'm Youssef Mohammed Abbas, a passionate Computer Science student and Full-Stack .NET developer who builds robust, scalable web applications by combining modern backend architecture with clean frontend design.
+
+I help clients turn complex requirements into high-performing digital solutions — from well-structured APIs and optimized databases to interfaces that feel fast and effortless.</p>
+           </p>
+           
+            </ul>
+            <div class="stats">
+             
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3. EDUCATION
+         Duplicate .t-card for more entries
+         ========================================================= -->
+    <section id="education">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"></span>
+          <h2>Education</h2>
+        </div>
+        <div class="timeline">
+          <article class="t-card reveal">
+            <p class="t-meta"><!-- PUT YEARS -->2024 — 2028</p>
+            <h3>Faculty of Science, Department: Physics and Computer Science,</h3>
+            <p>Zagazig University </p>
+            <p class="muted"></p>
+          </article>
+          <article class="t-card reveal">
+            <p class="t-meta">July 2026 – Present</p>
+            <h3>Digital Egypt Pioneers Initiative (DEPI)</h3>
+            <p>Participating in an intensive Full Stack .NET Web Developer training track, focusing on C#, ASP.NET Core, database design, and modern web architectures.</p>
+            <p class="muted"><!-- PUT DESCRIPTION --></p>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. EXPERIENCE
+         Duplicate .t-card for more jobs
+         ========================================================= -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"></span>
+          <h2>Experience</h2>
+        </div>
+        <div class="timeline">
+          <article class="t-card reveal">
+            <p class="t-meta">2026 — Present</p>
+            <h3>Full Stack .NET Web Developer Trainee</h3>
+            <p>Digital Egypt Pioneers Initiative – DEPI</p>
+            <ul>
+              <li>•Completed intensive training covering C# advanced concepts, Object-Oriented
+Programming (OOP), and data structures.
+•Developed robust backend services using ASP.NET Core Web API and MVC
+frameworks</li>
+             
+            </ul>
+          
+            </ul>
+          
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. SKILLS
+         Adjust data-level (0-100) and tag list
+         
+         ========================================================= -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"></span>
+          <h2>Skills</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="panel reveal">
+            <h3 style="margin-bottom:18px;">Technical Skills</h3>
+            <div class="skill">
+              <div class="skill-top"><span><!-- PUT SKILL -->HTML / CSS</span><span>90%</span></div>
+              <div class="bar"><span data-level="90"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-top"><span><!-- PUT SKILL -->JavaScript</span><span>85%</span></div>
+              <div class="bar"><span data-level="85"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-top"><span><!-- PUT SKILL -->ASP.NET</span><span>75%</span></div>
+              <div class="bar"><span data-level="75"></span></div>
+            </div>
+            <div class="skill">
+              <div class="skill-top"><span><!-- PUT SKILL -->Backend Basics</span><span>70%</span></div>
+              <div class="bar"><span data-level="70"></span></div>
+            </div>
+          </div>
+          <div class="panel reveal">
+            <h3 style="margin-bottom:18px;">Soft Skills</h3>
+            <div class="tags">
+              <!-- PUT YOUR SOFT SKILLS -->
+              <span class="tag">.NET Core & ASP.NET Web API</span>
+              <span class="tag">RESTful APIs & OOP</span>
+              <span class="tag">Data Structures & Algorithms</span>
+              <span class="tag">C++ & C#</span>
+              <span class="tag">HTML5 & CSS3</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+        
+
+
+    <!-- =========================================================
+         6. PROJECTS
+         data-category must be: web | mobile | other
+         ========================================================= -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"></span>
+          <h2>Projects</h2>
+        </div>
+        <div class="filters reveal">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="web">Web</button>
+          <button class="filter" data-filter="mobile">Mobile</button>
+          <button class="filter" data-filter="other">Other</button>
+        </div>
+        <div class="projects">
+      
+          <article class="project reveal" data-category="web">
+            <div class="placeholder-img project-img"><img src="img/WhatsApp Image 2026-10-11 at 12.22.15 AM.jpeg" alt=""></div>
+            <div class="project-body">
+              <h3>Hospital-Management-System-SQL</h3>
+              <p class="muted"></p>
+              <div class="tags" style="margin-top:10px;"><span class="tag">React-ready</span><span class="tag">API</span></div>
+              <div class="project-actions">
+                <a class="btn btn-primary btn-small" href="https://github.com/youssef0abbas/Hospital-Management-System-SQL_">Live Demo</a>
+              
+              </div>
+            </div>
+          </article>
+         
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. FEEDBACK / TESTIMONIALS
+         Duplicate .slide for more quotes
+         ========================================================= -->
+  
+    <!-- =========================================================
+         8. SERVICES
+         ========================================================= -->
+    <section id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"></span>
+          <h2>Services</h2>
+        </div>
+        <div class="cards-3">
+          
+          <article class="card reveal">
+            <div class="icon-circle">01</div>
+            <h3>Full-Stack.net</h3>
+            <p class="muted">Full Stack .NET Developer skilled in building responsive web applications using HTML, CSS, JavaScript, C#, ASP.NET Core, and SQL Server.</p>
+          </article>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         9. CONTACT
+         Form is client-side only (no backend)
+         ========================================================= -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"></span>
+          <h2>Contact</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="card reveal">
+            <div class="contact-item"><strong>Email</strong><br /><a href="mailto:yousseff.abbas4@gmail.com">yousseff.abbas4@gmail.com</a></div>
+            <!-- <div class="contact-item"><strong>Email</strong><br /><span>yousseff.abbas4@gmail.com</span></div> -->
+             <div class="contact-item"><strong>Phone</strong><br /><a href="https://wa.me/201278601544" target="_blank">0 12 78601544</a></div>
+            <!-- <div class="contact-item"><strong>Phone</strong><br /><span>0 12 78601544</span></div> -->
+            <div class="contact-item"><strong>Location</strong><br /><span><!-- PUT LOCATION -->Zagazig, Egypt</span></div>
+            <div class="socials" style="margin-top:12px;">
+              <a href="https://github.com/youssef0abbas">GH</a><a href="https://www.linkedin.com/in/youssef-mohammed-b55a16337/?isSelfProfile=true">in</a></a>
+            </div>
+            
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer>
+    <div class="container">
+      <p><!-- PUT YOUR NAME / YEAR -->© 2026 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+  <button id="toTop" aria-label="Back to top">↑</button>
+
+  <script>
+    /* Theme */
+    const root = document.documentElement;
+    const saved = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = saved || (prefersDark ? "dark" : "light");
+    const themeBtn = document.getElementById("themeToggle");
+    const syncThemeIcon = () => { themeBtn.textContent = root.dataset.theme === "dark" ? "☀️" : "🌙"; };
+    syncThemeIcon();
+    themeBtn.addEventListener("click", () => {
+      root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+      localStorage.setItem("theme", root.dataset.theme);
+      syncThemeIcon();
+    });
+
+    /* Mobile nav */
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+    hamburger.addEventListener("click", () => navLinks.classList.toggle("open"));
+    navLinks.querySelectorAll("a").forEach(a => a.addEventListener("click", () => navLinks.classList.remove("open")));
+
+    /* Active section on scroll */
+    const sections = [...document.querySelectorAll("section[id]")];
+    const links = [...document.querySelectorAll(".nav-links a")];
+    const spy = () => {
+      const y = window.scrollY + 90;
+      let current = sections[0].id;
+      sections.forEach(s => { if (y >= s.offsetTop) current = s.id; });
+      links.forEach(l => l.classList.toggle("active", l.getAttribute("href") === "#" + current));
+      document.getElementById("toTop").style.display = window.scrollY > 500 ? "block" : "none";
+    };
+    window.addEventListener("scroll", spy, { passive: true });
+    spy();
+
+    /* Back to top */
+    document.getElementById("toTop").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    /* Scroll reveal + skill bars */
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.classList.add("visible");
+        e.target.querySelectorAll(".bar > span").forEach(bar => {
+          bar.style.width = bar.dataset.level + "%";
+        });
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+    /* Project filters */
+    document.querySelectorAll(".filter").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const f = btn.dataset.filter;
+        document.querySelectorAll(".project").forEach(p => {
+          p.classList.toggle("hidden", f !== "all" && p.dataset.category !== f);
+        });
+      });
+    });
+
+    /* Testimonials slider */
+    const track = document.getElementById("track");
+    const slides = [...track.children];
+    const dotsWrap = document.getElementById("dots");
+    let idx = 0;
+    slides.forEach((_, i) => {
+      const d = document.createElement("button");
+      d.className = "dot" + (i === 0 ? " active" : "");
+      d.addEventListener("click", () => go(i));
+      dotsWrap.appendChild(d);
+    });
+    function go(i) {
+      idx = i;
+      track.style.transform = `translateX(-${idx * 100}%)`;
+      [...dotsWrap.children].forEach((d, n) => d.classList.toggle("active", n === idx));
+    }
+    setInterval(() => go((idx + 1) % slides.length), 5000);
+
+    /* Contact form validation */
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const data = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        subject: form.subject.value.trim(),
+        message: form.message.value.trim()
+      };
+      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email);
+      const rules = {
+        name: data.name.length > 1,
+        email: emailOk,
+        subject: data.subject.length > 1,
+        message: data.message.length > 8
+      };
+      let ok = true;
+      Object.keys(rules).forEach(key => {
+        const err = form.querySelector('.error[data-for="' + key + '"]');
+        err.style.display = rules[key] ? "none" : "block";
+        if (!rules[key]) ok = false;
+      });
+      document.getElementById("formSuccess").style.display = ok ? "block" : "none";
+      if (ok) form.reset();
+    });
+
+   </script>
+</body>
+</html>
+
+
+
+
